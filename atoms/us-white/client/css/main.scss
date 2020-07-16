@@ -1,0 +1,292 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+@import "thrasher-mixins";
+
+// Uncomment for embeds
+//@import "embed";
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+// Default breakpoints from Frontend
+$mq-breakpoints: (mobile: 320px,
+  mobileMedium: 375px,
+  mobileLandscape: 480px,
+  phablet: 660px,
+  tablet: 740px,
+  desktop: 980px,
+  leftCol: 1140px,
+  wide: 1300px);
+
+@font-face {
+  font-family: "GuardianTitlepiece";
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guardian Headline Full";
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// var
+$containerName: trusted-news;
+$backgroundColor: #fff;
+$textColor:#041F4A;
+
+section##{$containerName} {
+  width: 100%;
+  position: relative;
+  padding: 0 !important;
+  // overflow: hidden;
+  background-color: #fff;
+
+  .fc-container__inner,
+  .fc-slice,
+  .facia-snap {
+    overflow: hidden;
+  }
+
+  .facia-snap {
+    padding: 0;
+  }
+}
+
+.fc-container--thrasher {
+  margin-bottom: 0;
+}
+
+.#{$containerName} {
+  background-color: $backgroundColor;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 0 12px;
+  width: 100%;
+  border-top: 1px solid #dcdcdc;
+
+
+  @include mq(mobileMedium) {
+    height: 200px;
+  }
+
+  @include mq(mobileLandscape) {
+    height: 210px;
+  }
+
+  @include mq(phablet) {
+    height: 180px;
+  }
+
+  @include mq(tablet) {
+    height: 180px;
+    padding: 0 20px;
+  }
+
+  @include mq(desktop) {
+    height: 120px;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+  }
+
+  @include mq(leftCol) {
+    height: 95px;
+  }
+
+  @include mq(leftCol) {
+    flex-direction: row;
+  }
+
+  &__left {
+
+    @include mq(leftCol) {
+      width: 160px;
+    }
+
+    @include mq(wide) {
+      width: 240px;
+    }
+
+    &__title {
+      font-family: "Guardian Headline Full", Georgia, serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 115%;
+      text-decoration: none;
+      padding-top: 2px;
+      float: none;
+      width: auto;
+      margin-bottom: 1px;
+      color: #506991;
+
+
+      @include mq(leftCol) {
+        color: $textColor;
+        font-size: 1.5rem;
+        padding-bottom: 0;
+        position: absolute;
+        top: 2px;
+        width: 160px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(desktop) {
+      flex-direction: row;
+    }
+
+    @include mq(leftCol) {
+      margin-top: 2px;
+    }
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: #dcdcdc;
+      display: none;
+
+      @include mq(leftCol) {
+        display: block;
+        margin-left: -11px;
+      }
+
+      @include mq(wide) {
+        margin-left: -11px;
+      }
+    }
+
+    &__headline {
+      font-family: "Guardian Headline Full", "Guardian Egyptian Web", Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 115%;
+      color: $textColor;
+      width: 100%;
+      margin-bottom: 1px;
+
+      @include mq(leftCol) {
+        margin-left: 10px;
+      }
+    }
+
+    &__subheadline {
+      font-family: "Guardian Headline Full",
+        "Guardian Egyptian Web",
+        Georgia,
+        serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 115%;
+      color: $textColor;
+      width: 94%;
+
+      @include mq(desktop) {
+        width: 90%;
+      }
+
+      @include mq(leftCol) {
+        margin-left: 10px;
+        width: 80%;
+      }
+    }
+
+
+    &__buttons {
+      font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 115%;
+      color: $textColor;
+      margin-top: 12px;
+
+      @include mq(desktop) {
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+      }
+
+      @include mq(leftCol) {
+        margin-right: 0px;
+        margin-top: 22px;
+        margin-left: 20px;
+      }
+
+      @include mq(wide) {
+        margin-right: 80px;
+        margin-left: 20px;
+      }
+    }
+
+    &__contribute {
+      border-radius: 50px;
+      padding: 11px 20px 12px 20px;
+      background-color: #ffe500;
+      border: 1px solid #ffe500;
+
+      @include mq(desktop) {
+        height: 20px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background-color: #ffbb50;
+        border: 1px solid #ffbb50;
+      }
+    }
+
+    // &__roundel {
+    //   @include roundel-top-right;
+    // }
+  }
+}
+
+.interactive-atom {
+  margin: 0;
+  overflow: hidden;
+  // background-color: #ffe500;
+}
+
+.ios,
+.android {
+  .netflix-amazon {
+    padding: 0 10px;
+
+    @include mq(phablet) {
+      // width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+
+    @include mq(tablet) {
+      padding: 0 20px;
+    }
+
+    &__roundel {
+      margin-right: 0 !important;
+    }
+
+    &__main {
+      text-decoration: none;
+    }
+  }
+
+  .interactive-atom {
+    margin: 0;
+  }
+}
