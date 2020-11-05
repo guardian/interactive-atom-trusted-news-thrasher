@@ -9,8 +9,7 @@
 //@import "fullscreen";
 
 // Default breakpoints from Frontend
-$mq-breakpoints: (
-  mobile: 320px,
+$mq-breakpoints: (mobile: 320px,
   mobileMedium: 375px,
   mobileLandscape: 480px,
   phablet: 660px,
@@ -22,24 +21,18 @@ $mq-breakpoints: (
 
 @font-face {
   font-family: "GuardianTitlepiece";
-  src: url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff2")
-      format("woff2"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff")
-      format("woff"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.ttf")
-      format("truetype");
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Guardian Headline Full";
-  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2")
-      format("woff2"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff")
-      format("woff"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf")
-      format("truetype");
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -114,11 +107,16 @@ section##{$containerName} {
 
   &__left {
     @include mq(leftCol) {
-      width: 300px;
+      width: 298px;
+      width: 198px;
+      width: 182px;
     }
 
     @include mq(wide) {
       width: 410px;
+      width: 418px;
+      width: 273px;
+      width: 259px;
     }
 
     &__title {
@@ -211,11 +209,11 @@ section##{$containerName} {
 
       @include mq(desktop) {
         width: 100%;
+        width: 80%;
       }
 
       @include mq(leftCol) {
         margin-left: 10px;
-        width: 100%;
       }
 
       &:nth-last-child(1) {
