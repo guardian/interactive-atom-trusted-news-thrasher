@@ -42,7 +42,7 @@ $containerName: trusted-news;
 $backgroundColor: #fff;
 $textColor: #041f4a;
 
-section##{$containerName} {
+#trusted-news, #support-the-guardian, #support {
   width: 100%;
   position: relative;
   padding: 0 !important;
