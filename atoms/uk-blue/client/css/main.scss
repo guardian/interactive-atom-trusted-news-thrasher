@@ -64,7 +64,9 @@ section##{$containerName} {
   margin-bottom: 12px;
 }
 
-.#{$containerName} {
+#trusted-news,
+#support-the-guardian,
+#support {
   background-color: #f6f6f6;
   margin: 0 auto;
   display: flex;
