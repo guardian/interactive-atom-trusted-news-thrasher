@@ -69,37 +69,38 @@ section##{$containerName} {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 290px;
+  // height: 290px;
   padding: 0 0 0 12px;
   width: calc(100% - 12px);
   border-top: 1px solid #afafaf;
 
-  @include mq(mobileMedium) {
-    height: 270px;
-  }
+  // @include mq(mobileMedium) {
+  //   height: 270px;
+  // }
 
   @include mq(mobileLandscape) {
-    height: 210px;
-  }
-
-  @include mq(phablet) {
-    height: 210px;
-  }
-
-  @include mq(tablet) {
-    height: 180px;
+    // height: 210px;
     padding: 0 20px;
   }
 
+  // @include mq(phablet) {
+  //   height: 210px;
+  // }
+
+  // @include mq(tablet) {
+  //   // height: 180px;
+    
+  // }
+
   @include mq(desktop) {
-    height: 120px;
+    // height: 120px;
     border-left: 1px solid #afafaf;
     border-right: 1px solid #afafaf;
   }
 
-  @include mq(leftCol) {
-    height: 115px;
-  }
+  // @include mq(leftCol) {
+  //   height: 115px;
+  // }
 
   @include mq(leftCol) {
     flex-direction: row;
@@ -108,15 +109,10 @@ section##{$containerName} {
   &__left {
     @include mq(leftCol) {
       width: 298px;
-      width: 198px;
-      width: 182px;
     }
 
     @include mq(wide) {
       width: 410px;
-      width: 418px;
-      width: 273px;
-      width: 259px;
     }
 
     &__title {
@@ -130,14 +126,16 @@ section##{$containerName} {
       width: 98%;
       margin-bottom: 1px;
       color: #506991;
+      display:none;
 
       @include mq(leftCol) {
+        display:block;
         color: $textColor;
         font-size: 1.5rem;
         padding-bottom: 0;
         position: absolute;
         top: 2px;
-        width: 160px;
+        width: 200px;
       }
     }
   }
@@ -152,6 +150,10 @@ section##{$containerName} {
 
     @include mq(leftCol) {
       margin-top: 2px;
+      margin-left: 42px;
+    }
+    @include mq(wide) {
+      margin-left: 75px;
     }
 
     &::before {
@@ -166,11 +168,6 @@ section##{$containerName} {
 
       @include mq(leftCol) {
         display: block;
-        margin-left: -11px;
-      }
-
-      @include mq(wide) {
-        margin-left: -11px;
       }
     }
 
@@ -186,10 +183,12 @@ section##{$containerName} {
       line-height: 115%;
       color: $textColor;
       width: 98%;
-      margin-bottom: 1px;
+      margin-bottom: 12px;
+      margin-top: 4px;
 
       @include mq(leftCol) {
         margin-left: 10px;
+        margin-top: 2px;
       }
     }
 
@@ -216,6 +215,10 @@ section##{$containerName} {
         margin-left: 10px;
       }
 
+      @include mq(wide) {
+        width:84%;
+      }
+
       &:nth-last-child(1) {
         margin-bottom: 12px;
       }
@@ -229,23 +232,18 @@ section##{$containerName} {
       line-height: 115%;
       color: $textColor;
       margin-top: 12px;
+      margin-bottom: 30px;
 
       @include mq(desktop) {
         display: flex;
         margin-right: 0;
-        margin-top: 25px;
-      }
-
-      @include mq(leftCol) {
-        margin-right: 0px;
-        margin-top: 38px;
-        margin-left: 100px;
+        margin-top: 76px;
+        margin-bottom:20px;
       }
 
       @include mq(wide) {
         margin-left: 50px;
         margin-right: 80px;
-        margin-top: 20px;
       }
     }
 
