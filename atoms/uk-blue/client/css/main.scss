@@ -42,7 +42,9 @@ $containerName: trusted-news;
 $backgroundColor: #fff;
 $textColor: #041f4a;
 
-section##{$containerName} {
+#trusted-news,
+#support-the-guardian,
+#support {
   width: 100%;
   position: relative;
   padding: 0 !important;
@@ -64,9 +66,7 @@ section##{$containerName} {
   margin-bottom: 12px;
 }
 
-#trusted-news,
-#support-the-guardian,
-#support {
+.trusted-news {
   background-color: #f6f6f6;
   margin: 0 auto;
   display: flex;
