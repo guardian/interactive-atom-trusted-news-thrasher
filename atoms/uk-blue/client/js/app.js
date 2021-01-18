@@ -7,9 +7,8 @@ function shouldHideSupportMessaging() {
     return getCookieValue('gu_hide_support_messaging') === 'true';
 }
 
-
 if (shouldHideSupportMessaging()) {
-    document.getElementById("trusted-news").style.display = "none";
+    document.getElementById("digital-subscription").style.display = "none";
 } else {
-    document.getElementById("trusted-news").style.display = "block";
+    document.getElementById("digital-subscription").style.display = "block";
 }

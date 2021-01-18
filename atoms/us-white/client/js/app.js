@@ -9,7 +9,7 @@ function shouldHideSupportMessaging() {
 
 
 if (shouldHideSupportMessaging()) {
-    document.getElementById("trusted-news").style.display = "none";
+    document.getElementById("digital-subscription").style.display = "none";
 } else {
-    document.getElementById("trusted-news").style.display = "block";
+    document.getElementById("digital-subscription").style.display = "block";
 }

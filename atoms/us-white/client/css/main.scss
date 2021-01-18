@@ -41,7 +41,8 @@ $containerName: trusted-news;
 $backgroundColor: #fff;
 $textColor:#041F4A;
 
-section##{$containerName} {
+section##{$containerName},
+#digital-subscription {
   width: 100%;
   position: relative;
   padding: 0 !important;
