@@ -71,11 +71,7 @@ $textColor: #041f4a;
 
   &__left {
     @include mq(leftCol) {
-      width: 298px;
-    }
-
-    @include mq(wide) {
-      width: 410px;
+      position: absolute;
     }
 
     &__title {
@@ -113,10 +109,11 @@ $textColor: #041f4a;
 
     @include mq(leftCol) {
       margin-top: 2px;
-      margin-left: 42px;
+      margin-left: 150px;
     }
     @include mq(wide) {
-      margin-left: 75px;
+      width: 740px;
+      margin-left: 230px;
     }
 
     &::before {
@@ -201,6 +198,12 @@ $textColor: #041f4a;
         margin-right: 0;
         margin-top: 76px;
         margin-bottom:20px;
+      }
+
+      @include mq(leftCol) {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
       }
 
       @include mq(wide) {
