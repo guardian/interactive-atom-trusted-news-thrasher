@@ -1,0 +1,19 @@
+#trusted-news,
+#support-the-guardian,
+#digital-subscription,
+#support {
+  background-color: #fff;
+}
+
+.trusted-news {
+  background-color: #fff;
+  border-top: 1px solid #dcdcdc;
+  @include mq(desktop) {
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+  }
+  &__right::before {
+    background-color: #dcdcdc;
+  }
+
+}

@@ -1,11 +1,6 @@
-
-// Uncomment for embeds
-//@import "embed";
-// Uncomment for full screen (including immersive article main media)
-//@import "fullscreen";
-
 // Default breakpoints from Frontend
-$mq-breakpoints: (mobile: 320px,
+$mq-breakpoints: (
+  mobile: 320px,
   mobileMedium: 375px,
   mobileLandscape: 480px,
   phablet: 660px,
@@ -34,8 +29,6 @@ $mq-breakpoints: (mobile: 320px,
 }
 
 // var
-$containerName: trusted-news;
-$backgroundColor: #fff;
 $textColor: #041f4a;
 
 #trusted-news,
@@ -45,8 +38,6 @@ $textColor: #041f4a;
   width: 100%;
   position: relative;
   padding: 0 !important;
-  // overflow: hidden;
-  background-color: #e0e4e8;
 
   .fc-container__inner,
   .fc-slice,
@@ -64,42 +55,15 @@ $textColor: #041f4a;
 }
 
 .trusted-news {
-  background-color: #f6f6f6;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  // height: 290px;
   padding: 0 0 0 12px;
   width: calc(100% - 12px);
-  border-top: 1px solid #afafaf;
-
-  // @include mq(mobileMedium) {
-  //   height: 270px;
-  // }
 
   @include mq(mobileLandscape) {
-    // height: 210px;
     padding: 0 20px;
   }
-
-  // @include mq(phablet) {
-  //   height: 210px;
-  // }
-
-  // @include mq(tablet) {
-  //   // height: 180px;
-
-  // }
-
-  @include mq(desktop) {
-    // height: 120px;
-    border-left: 1px solid #afafaf;
-    border-right: 1px solid #afafaf;
-  }
-
-  // @include mq(leftCol) {
-  //   height: 115px;
-  // }
 
   @include mq(leftCol) {
     flex-direction: row;
@@ -162,7 +126,6 @@ $textColor: #041f4a;
       position: absolute;
       top: 0;
       bottom: 0;
-      background-color: #afafaf;
       display: none;
 
       @include mq(leftCol) {
@@ -263,17 +226,12 @@ $textColor: #041f4a;
         border: 1px solid #ffbb50;
       }
     }
-
-    // &__roundel {
-    //   @include roundel-top-right;
-    // }
   }
 }
 
 .interactive-atom {
   margin: 0;
   overflow: hidden;
-  // background-color: #ffe500;
 }
 
 .ios,
@@ -282,7 +240,6 @@ $textColor: #041f4a;
     padding: 0 10px;
 
     @include mq(phablet) {
-      // width: 100%;
       margin: 0;
       max-width: none;
     }
