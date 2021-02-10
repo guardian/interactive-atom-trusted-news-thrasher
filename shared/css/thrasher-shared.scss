@@ -96,6 +96,12 @@ $textColor: #041f4a;
         top: 2px;
         width: 200px;
       }
+
+      .g-name {
+        @include mq(wide) {
+          display: inline-block;
+        }
+      }
     }
   }
 
