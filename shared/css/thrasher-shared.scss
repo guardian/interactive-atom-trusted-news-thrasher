@@ -138,11 +138,10 @@ $textColor: #041f4a;
     &__wrapper {
       width: 100%;
       @include mq(desktop) {
-        width: 620px;
-        margin-right: 20px;
+        width: 820px;
       }
       @include mq(leftCol) {
-        width: 630px;
+        width: 830px;
       }
     }
 
