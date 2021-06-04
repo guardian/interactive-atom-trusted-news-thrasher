@@ -8,7 +8,7 @@
 .trusted-news {
   background-color: #f6f6f6;
   border-top: 1px solid #afafaf;
-  @include mq(desktop) {
+  @include mq(tablet) {
     border-left: 1px solid #afafaf;
     border-right: 1px solid #afafaf;
   }

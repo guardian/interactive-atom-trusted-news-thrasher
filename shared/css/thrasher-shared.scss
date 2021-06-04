@@ -118,7 +118,6 @@ $textColor: #041f4a;
       margin-left: 150px;
     }
     @include mq(wide) {
-      width: 740px;
       margin-left: 230px;
     }
 
@@ -138,6 +137,13 @@ $textColor: #041f4a;
 
     &__wrapper {
       width: 100%;
+      @include mq(desktop) {
+        width: 620px;
+        margin-right: 20px;
+      }
+      @include mq(leftCol) {
+        width: 630px;
+      }
     }
 
     &__headline {
@@ -164,24 +170,20 @@ $textColor: #041f4a;
       font-weight: 400;
       line-height: 115%;
       color: $textColor;
-      width: 94%;
       margin-bottom: 0;
+      padding-right: 10px;
 
       @include mq(mobileMedium) {
-        width: 90%;
+        padding-right: 24px;
       }
 
-      @include mq(desktop) {
-        width: 100%;
-        width: 80%;
-      }
 
       @include mq(leftCol) {
         margin-left: 10px;
       }
 
       @include mq(wide) {
-        width:84%;
+        // width:84%;
       }
 
       &:nth-last-child(1) {
@@ -202,19 +204,8 @@ $textColor: #041f4a;
       @include mq(desktop) {
         display: flex;
         margin-right: 0;
-        margin-top: 76px;
-        margin-bottom:20px;
-      }
-
-      @include mq(leftCol) {
-        position: absolute;
-        right: 10px;
-        bottom: 0;
-      }
-
-      @include mq(wide) {
-        margin-left: 50px;
-        margin-right: 80px;
+        margin-bottom: 14px;
+        align-items: flex-end;
       }
     }
 
