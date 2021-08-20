@@ -61,16 +61,16 @@ $textColor: #041f4a;
   padding: 0 0 0 12px;
   width: calc(100% - 12px);
 
-  @include mq(mobileLandscape) {
+  @include mc(mobileLandscape) {
     padding: 0 20px;
   }
 
-  @include mq(leftCol) {
+  @include mc(leftCol) {
     flex-direction: row;
   }
 
   &__left {
-    @include mq(leftCol) {
+    @include mc(leftCol) {
       position: absolute;
     }
 
@@ -87,7 +87,7 @@ $textColor: #041f4a;
       color: #506991;
       display:none;
 
-      @include mq(leftCol) {
+      @include mc(leftCol) {
         display:block;
         color: $textColor;
         font-size: 1.5rem;
@@ -98,7 +98,7 @@ $textColor: #041f4a;
       }
 
       .g-name {
-        @include mq(wide) {
+        @include mc(wide) {
           display: inline-block;
         }
       }
@@ -109,15 +109,15 @@ $textColor: #041f4a;
     display: flex;
     flex-direction: column;
 
-    @include mq(desktop) {
+    @include mc(desktop) {
       flex-direction: row;
     }
 
-    @include mq(leftCol) {
+    @include mc(leftCol) {
       margin-top: 2px;
       margin-left: 150px;
     }
-    @include mq(wide) {
+    @include mc(wide) {
       margin-left: 230px;
     }
 
@@ -130,17 +130,17 @@ $textColor: #041f4a;
       bottom: 0;
       display: none;
 
-      @include mq(leftCol) {
+      @include mc(leftCol) {
         display: block;
       }
     }
 
     &__wrapper {
       width: 100%;
-      @include mq(desktop) {
+      @include mc(desktop) {
         width: 820px;
       }
-      @include mq(leftCol) {
+      @include mc(leftCol) {
         width: 830px;
       }
     }
@@ -156,7 +156,7 @@ $textColor: #041f4a;
       margin-bottom: 12px;
       margin-top: 4px;
 
-      @include mq(leftCol) {
+      @include mc(leftCol) {
         margin-left: 10px;
         margin-top: 2px;
       }
@@ -172,16 +172,16 @@ $textColor: #041f4a;
       margin-bottom: 0;
       padding-right: 10px;
 
-      @include mq(mobileMedium) {
+      @include mc(mobileMedium) {
         padding-right: 24px;
       }
 
 
-      @include mq(leftCol) {
+      @include mc(leftCol) {
         margin-left: 10px;
       }
 
-      @include mq(wide) {
+      @include mc(wide) {
         // width:84%;
       }
 
@@ -200,7 +200,7 @@ $textColor: #041f4a;
       margin-top: 12px;
       margin-bottom: 30px;
 
-      @include mq(desktop) {
+      @include mc(desktop) {
         display: flex;
         margin-right: 0;
         margin-bottom: 14px;
@@ -215,7 +215,7 @@ $textColor: #041f4a;
       border: 1px solid #ffe500;
       margin-top: 8px;
 
-      @include mq(desktop) {
+      @include mc(desktop) {
         height: 20px;
       }
 
@@ -238,12 +238,12 @@ $textColor: #041f4a;
   .netflix-amazon {
     padding: 0 10px;
 
-    @include mq(phablet) {
+    @include mc(phablet) {
       margin: 0;
       max-width: none;
     }
 
-    @include mq(tablet) {
+    @include mc(tablet) {
       padding: 0 20px;
     }
 
