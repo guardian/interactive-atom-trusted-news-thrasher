@@ -1,7 +1,7 @@
-@import "mq";
-@import "fonts";
-@import "palette";
-@import "thrasher-mixins";
+@import 'mq';
+@import 'fonts';
+@import 'palette';
+@import 'thrasher-mixins';
 
 // Uncomment for embeds
 //@import "embed";
@@ -9,7 +9,8 @@
 //@import "fullscreen";
 
 // Default breakpoints from Frontend
-$mq-breakpoints: (mobile: 320px,
+$mq-breakpoints: (
+  mobile: 320px,
   mobileMedium: 375px,
   mobileLandscape: 480px,
   phablet: 660px,
@@ -20,19 +21,25 @@ $mq-breakpoints: (mobile: 320px,
 );
 
 @font-face {
-  font-family: "GuardianTitlepiece";
-  src: url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff2") format("woff2"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff") format("woff"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.ttf") format("truetype");
+  font-family: 'GuardianTitlepiece';
+  src: url('https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff2')
+      format('woff2'),
+    url('https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.woff')
+      format('woff'),
+    url('https://interactive.guim.co.uk/fonts/garnett/GTGuardianTitlepiece-Bold.ttf')
+      format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Guardian Headline Full";
-  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2") format("woff2"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff") format("woff"),
-    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf") format("truetype");
+  font-family: 'Guardian Headline Full';
+  src: url('https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2')
+      format('woff2'),
+    url('https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff')
+      format('woff'),
+    url('https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf')
+      format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -44,7 +51,7 @@ $textColor: #041f4a;
 
 #trusted-news,
 #support-the-guardian,
-#digital-subscription, 
+#digital-subscription,
 #support {
   width: 100%;
   position: relative;
@@ -63,37 +70,27 @@ $textColor: #041f4a;
   }
 }
 
+.thrasher-inner {
+  width: 100%;
+}
+
 .fc-container--thrasher {
   margin-bottom: 12px;
 }
 
 .#{$containerName} {
   background-color: #f6f6f6;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  // height: 290px;
   padding: 0 0 0 12px;
   width: calc(100% - 12px);
   border-top: 1px solid #afafaf;
-
-  // @include mq(mobileMedium) {
-  //   height: 270px;
-  // }
+  width: 100%;
 
   @include mq(mobileLandscape) {
-    // height: 210px;
     padding: 0 20px;
   }
-
-  // @include mq(phablet) {
-  //   height: 210px;
-  // }
-
-  // @include mq(tablet) {
-  //   // height: 180px;
-    
-  // }
 
   @include mq(desktop) {
     // height: 120px;
@@ -111,15 +108,15 @@ $textColor: #041f4a;
 
   &__left {
     @include mq(leftCol) {
-      width: 150px;
+      width: 148px;
     }
 
     @include mq(wide) {
-      width: 230px;
+      width: 228px;
     }
 
     &__title {
-      font-family: "Guardian Headline Full", Georgia, serif;
+      font-family: 'Guardian Headline Full', Georgia, serif;
       font-weight: 700;
       font-size: 20px;
       line-height: 115%;
@@ -129,10 +126,10 @@ $textColor: #041f4a;
       width: 98%;
       margin-bottom: 1px;
       color: #506991;
-      display:none;
+      display: none;
 
       @include mq(leftCol) {
-        display:block;
+        display: block;
         color: $textColor;
         font-size: 1.5rem;
         padding-bottom: 0;
@@ -156,7 +153,7 @@ $textColor: #041f4a;
     // }
 
     &::before {
-      content: "";
+      content: '';
       width: 1px;
       height: 100%;
       position: absolute;
@@ -175,7 +172,7 @@ $textColor: #041f4a;
     }
 
     &__headline {
-      font-family: "Guardian Headline Full", "Guardian Egyptian Web", Georgia,
+      font-family: 'Guardian Headline Full', 'Guardian Egyptian Web', Georgia,
         serif;
       font-size: 20px;
       font-weight: 700;
@@ -192,7 +189,7 @@ $textColor: #041f4a;
     }
 
     &__subheadline {
-      font-family: "Guardian Headline Full", "Guardian Egyptian Web", Georgia,
+      font-family: 'Guardian Headline Full', 'Guardian Egyptian Web', Georgia,
         serif;
       font-size: 20px;
       font-weight: 400;
@@ -211,9 +208,9 @@ $textColor: #041f4a;
 
       @include mq(leftCol) {
         margin-left: 10px;
-        width:75%;
+        width: 75%;
       }
-      
+
       @include mq(wide) {
       }
 
@@ -223,8 +220,8 @@ $textColor: #041f4a;
     }
 
     &__buttons {
-      font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial,
-        "Lucida Grande", sans-serif;
+      font-family: 'Guardian Text Sans Web', 'Helvetica Neue', Helvetica, Arial,
+        'Lucida Grande', sans-serif;
       font-size: 17px;
       font-weight: 600;
       line-height: 115%;
@@ -243,6 +240,8 @@ $textColor: #041f4a;
       border: 1px solid #ffe500;
       margin-top: 8px;
 
+      text-decoration: none;
+      color: black;
       @include mq(desktop) {
         height: 20px;
       }
